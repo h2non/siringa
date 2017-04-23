@@ -4,7 +4,7 @@
    :align: center
 
 
-|Build Status| |PyPI| |Coverage Status| |Documentation Status| |Stability| |Versions| |SayThanks|
+       |Build Status| |PyPI| |Coverage Status| |Documentation Status| |Stability| |Versions| |SayThanks|
 
 About
 -----
