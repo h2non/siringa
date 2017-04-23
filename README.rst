@@ -261,7 +261,7 @@ where you can consume and inject dependencies from a parent container.
 Mocking dependencies
 ^^^^^^^^^^^^^^^^^^^^
 
-`siringa`` allows you to define mocks for dependencies, which is particularly useful during testing:
+``siringa`` allows you to define mocks for dependencies, which is particularly useful during testing:
 
 .. code-block:: python
 
