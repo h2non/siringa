@@ -64,7 +64,7 @@ setup(
     version=version,
     author='Tomas Aparicio',
     description=(
-        'Mminimalist and idiomatic dependency injection library'
+        'Minimalist and idiomatic dependency injection library'
     ),
     url='https://github.com/h2non/siringa',
     license='MIT',
