@@ -74,10 +74,15 @@ setup(
     tests_require=tests_require,
     install_requires=install_requires,
     packages=find_packages(exclude=['tests', 'examples']),
-    package_data={'': [
-        'LICENSE', 'README.rst', 'History.rst',
-        'requirements.txt', 'requirements-dev.txt'
-    ]},
+    package_data={
+        '': [
+            'LICENSE', 'README.rst', 'History.rst',
+            'requirements.txt', 'requirements-dev.txt',
+        ],
+        'siringa': [
+            '*.hy',
+        ]
+    },
     package_dir={'siringa': 'siringa'},
     include_package_data=True,
     cmdclass={'test': PyTest},
