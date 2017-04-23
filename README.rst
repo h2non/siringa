@@ -4,7 +4,7 @@
    :align: center
 
 
-|Build Status| |PyPI| |Coverage Status| |Documentation Status| |Stability| |Quality| |Versions| |SayThanks|
+|Build Status| |PyPI| |Coverage Status| |Documentation Status| |Stability| |Versions| |SayThanks|
 
 About
 -----
@@ -307,9 +307,6 @@ Mocking dependencies
    :target: https://coveralls.io/github/h2non/siringa?branch=master
 .. |Documentation Status| image:: https://readthedocs.org/projects/siringa/badge/?version=latest
    :target: http://siringa.readthedocs.io/en/latest/?badge=latest
-.. |Quality| image:: https://codeclimate.com/github/h2non/siringa/badges/gpa.svg
-   :target: https://codeclimate.com/github/h2non/siringa
-   :alt: Code Climate
 .. |Stability| image:: https://img.shields.io/pypi/status/siringa.svg
    :target: https://pypi.python.org/pypi/siringa
    :alt: Stability
