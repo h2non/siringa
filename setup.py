@@ -64,7 +64,7 @@ setup(
     version=version,
     author='Tomas Aparicio',
     description=(
-        'Simple, minimalist dependency injection library'
+        'Mminimalist and idiomatic dependency injection library'
     ),
     url='https://github.com/h2non/siringa',
     license='MIT',
@@ -98,6 +98,5 @@ setup(
         'Topic :: Software Development',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy'
     ],
 )

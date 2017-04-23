@@ -2,11 +2,16 @@ language: python
 
 python:
   - "3.3"
+  - "3.3"
   - "3.4"
   - "3.5"
   - "3.6"
   - pypy3
   - nightly
+
+matrix:
+  allow_failures:
+  - python: pypy3
 
 sudo: false
 

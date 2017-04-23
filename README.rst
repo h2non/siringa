@@ -28,7 +28,7 @@ Features
 -  First-class support for dependency mocking for better testing.
 -  Detects cyclic dependencies (work in progress).
 -  Small and (almost) dependency-free library.
--  Works with CPython 3+ and PyPy3.
+-  Works with CPython 3+.
 
 Design philosophy
 -----------------
