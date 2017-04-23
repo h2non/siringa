@@ -9,7 +9,7 @@
 About
 -----
 
-``siringa`` (meaning is ``syringe`` in Italian) a minimalist, idiomatic `dependency injection`_ and `inversion of control`_ library
+``siringa`` (meaning ``syringe`` in Italian) is a minimalist, idiomatic `dependency injection`_ and `inversion of control`_ library
 for Python_, implemented in Hy_, a homoiconic Lisp dialect for Python.
 
 To get started, take a look to the `documentation`_, `API`_, `tutorial`_ and `examples`_.
