@@ -21,7 +21,7 @@ def run(sql, db: '!DB'):
 # Test mock call
 assert run('SELECT name FROM foo') == ['foo', 'bar']
 
-# Once done, clear all the mocks
+# Once done, clear the mock
 siringa.unregister_mock('DB')
 
 # Or alternatively clear all the registed mocks within the container
