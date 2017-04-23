@@ -39,7 +39,7 @@ Design philosophy
 -  Minimalism: less enables more.
 -  Uniformity: there is only one way to declare and consume dependencies.
 -  Predictability: developer intentions must persist based on explicitly defined intention.
--  Domain abstract: do not enforce any domain-specific pattern.
+-  Domain agnostic: do not enforce any domain-specific pattern.
 
 Installation
 ------------
@@ -151,7 +151,7 @@ Finally, you can register dependencies with a traditional function call, such as
 Invocation
 ^^^^^^^^^^
 
-`siringa`` wraps callable object in the transparent and frictionless way abstracting things for developers.
+``siringa`` wraps callable object in the transparent and frictionless way abstracting things for developers.
 
 You can invoke or instantiate any dependency injection instrumented object
 as you do traditionally in raw Python code and ``siringa`` will do the rest for you inferring and pattern-matching
