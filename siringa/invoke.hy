@@ -28,23 +28,25 @@
         (assoc buf pos (next -args))
         (except [e StopIteration])))) buf)
 
-(defn invoke [cont func &rest args &kwargs kwargs]
+(defn invoke [cont target &rest args &kwargs kwargs]
   "Invokes a given callable object with specific variadic arguments.
   Relies on type annotation pattern matching for transparent
   dependency injection."
-  (unless (injectable? func)
-    (raise (TypeError "only can invoke classes, functions or methods")))
-  (setv kwlen (len (keyword-args func)))
-  (setv signature (signature-values func))
+  (unless (injectable? target)
+    (raise
+      (TypeError
+        (.format "only can invoke classes, functions or methods, but got: {}" target))))
+  (setv kwlen (len (keyword-args target)))
+  (setv signature (signature-values target))
   (setv pending (- (- (len signature)
-                      (len (analyze func)))
+                      (len (analyze target)))
                    (+ (len args)
                       (len kwargs))))
-  (if (method? func)
+  (if (method? target)
     (setv pending (dec pending)))
   (unless (or (= pending 0)
               (< (- pending kwlen) 1))
     (raise (TypeError
       ((. "{}() missing {} required positional arguments" format)
-        (. func --name--) pending))))
-  (apply func (match-args cont signature args) kwargs))
+        (. target --name--) pending))))
+  (apply target (match-args cont signature args) kwargs))

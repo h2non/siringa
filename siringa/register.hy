@@ -23,7 +23,7 @@
 
 (defn register-partial [cont &optional name mock]
   (cond [(none? name)
-          (fn [callable] (register-partial cont callable mock))]
+          (fn [target] (register-partial cont target mock))]
         [(str? name)
           (fn [obj] (registrator cont obj name mock))]
         [(injectable? name)

@@ -26,3 +26,9 @@ Featured example using classes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ../examples/featured.py
+
+
+Mocking dependencies
+^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ../examples/mocking.py

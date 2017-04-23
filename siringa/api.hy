@@ -3,9 +3,10 @@
 
 ;; Public API layer symbols to export
 (def --all-- (, "layer" "register" "inject" "mock"
-                "clear" "clear_mocks" "lookup" "lookup_mock"
+                "clear" "clear_mocks" "lookup"
+                "unregister" "unregister_mock"
                 "is_injectable" "Annotation" "A"
-                "mocks" "parent" "container"))
+                "lookup_mock" "mocks" "parent" "container"))
 
 ;; Default built-in dependency layer
 (def layer (Layer "default"))
@@ -22,6 +23,8 @@
 (defdelegator inject)
 (defdelegator Annotation)
 (defdelegator A) ;; Shortcut to "Annotation"
+(defdelegator unregister)
+(defdelegator unregister-mock)
 (defdelegator clear)
 (defdelegator clear-mocks)
 (defdelegator lookup)

@@ -110,7 +110,7 @@ In this case, the argument name expression will be used for dependency inference
 Registering dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-`siringa`` allows you to rely on decorators for idiomatic dependencies registering.
+``siringa`` allows you to rely on decorators for idiomatic dependencies registering.
 
 Dependency name is dynamically inferred at registration time based on ``class`` or ``function`` name.
 
@@ -267,24 +267,29 @@ Mocking dependencies
 
     @siringa.register
     class DB(object):
-        def query(sql):
-            pass
+        def query(self, sql):
+            return ['john', 'mike']
 
     @siringa.mock('DB')
     class DBMock(object):
-        def query(sql):
+        def query(self, sql):
             return ['foo', 'bar']
 
-    def query(sql, DB: '!'):
-        return DB().query(sql)
+    @siringa.inject
+    def run(sql, db: '!DB'):
+        return db().query(sql)
 
-    assert query('SELECT * FROM foo') == ['foo', 'bar']
+    # Test mock call
+    assert run('SELECT name FROM foo') == ['foo', 'bar']
 
     # Once done, clear all the mocks
     siringa.unregister_mock('DB')
 
     # Or alternatively clear all the registed mocks within the container
     siringa.clear_mocks()
+
+    # Test read call
+    assert run('SELECT name FROM foo') == ['john', 'mike']
 
 
 .. _Python: http://python.org
