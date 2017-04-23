@@ -21,14 +21,14 @@ import hy  # noqa
 
 from .api import *  # noqa
 from .api import __all__ as api_symbols
-from .layer import Layer
-from .analyzer import analyze
-from .container import Container
-from .dependency import Dependency
-from .errors import (SiringaError,
-                     MissingDependencyError,
-                     DuplicatedDependencyError,
-                     InvalidDependencyTypeError)
+from .layer import Layer                           # noqa
+from .analyzer import analyze                      # noqa
+from .container import Container                   # noqa
+from .dependency import Dependency                 # noqa
+from .errors import (SiringaError,                 # noqa
+                     MissingDependencyError,       # noqa
+                     DuplicatedDependencyError,    # noqa
+                     InvalidDependencyTypeError)   # noqa
 
 # Export public package API symbols
 __all__ = (

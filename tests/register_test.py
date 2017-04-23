@@ -48,8 +48,8 @@ def test_register_mock():
     def foo():
         return 'foo'
 
-    @mock(c)
-    def foo():
+    @mock(c, 'foo')
+    def foo_mock():
         return 'mock'
 
     assert 'foo' in c
