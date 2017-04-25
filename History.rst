@@ -1,6 +1,17 @@
-
 History
 =======
+
+v0.1.2 / 2017-04-25
+-------------------
+
+  * feat(examples): add inject flag example
+  * fix(injector): process inject flag "!" based annotations accordingly
+  * fix(register): return decorated injectable callable object, if needed
+  * fix(register): return decorated injectable callable object, if needed
+  * refactor(analyzer): use method access notation
+  * refactor(docs): typo in design philosophy section
+  * fix(docs): typo in rst syntax
+  * fix(examples): type on mocking example comment
 
 v0.1.1 / 2017-04-24
 -------------------
