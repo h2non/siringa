@@ -152,8 +152,8 @@ Invocation
 ``siringa`` wraps callable object in the transparent and frictionless way abstracting things for developers.
 
 You can invoke or instantiate any dependency injection instrumented object
-as you do traditionally in raw Python code and ``siringa`` will do the rest for you inferring and pattern-matching
-required dependencies accordingly for you.
+as you do traditionally in raw Python code and ``siringa`` will do the rest
+inferring and pattern-matching required dependencies accordingly for you.
 
 Below is an example of how simple it is:
 
