@@ -18,8 +18,10 @@
   (if (none? obj)
     (raise (InvalidDependencyTypeError
               "cannot register None object")))
+  (setv value
+    (if (injectable? obj) (inject cont obj) obj))
   (assoc cont name
-    (Dependency (if (injectable? obj) (inject cont obj) obj) mock)) True)
+    (Dependency value mock)) value)
 
 (defn register-partial [cont &optional name mock]
   (cond [(none? name)
@@ -27,8 +29,7 @@
         [(str? name)
           (fn [obj] (registrator cont obj name mock))]
         [(injectable? name)
-          (do
-            (registrator cont name (infer-name name) mock) name)]
+          (registrator cont name (infer-name name) mock)]
         [True
           (raise
             (InvalidDependencyTypeError
