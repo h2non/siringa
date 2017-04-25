@@ -53,6 +53,7 @@
         [True annotation]))
 
 (defn map-params [param]
+  (print "PARAM:" param)
   (cond [(str? param) (annotate param)]
         [True param]))
 
