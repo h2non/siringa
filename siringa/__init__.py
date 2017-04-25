@@ -44,4 +44,4 @@ __author__ = 'Tomas Aparicio'
 __license__ = 'MIT'
 
 # Current package version
-__version__ = '0.1.2'
+__version__ = '0.1.3'
