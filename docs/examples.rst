@@ -27,6 +27,10 @@ Featured example using classes
 
 .. literalinclude:: ../examples/featured.py
 
+Injection flag based annotations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ../examples/inject-flag.py
 
 Mocking dependencies
 ^^^^^^^^^^^^^^^^^^^^
