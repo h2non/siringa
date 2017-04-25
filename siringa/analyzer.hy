@@ -4,7 +4,7 @@
 (import [siringa.annotation [Annotation]])
 
 (defn signature [obj]
-  ((. inspect signature) obj))
+  (.signature inspect obj))
 
 (defn signature-values [obj]
   ((. (. (signature obj) parameters) values)))
