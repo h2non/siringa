@@ -14,8 +14,6 @@ for Python_, implemented in Hy_, a homoiconic Lisp dialect for Python.
 
 To get started, take a look to the `documentation`_, `API`_, `tutorial`_ and `examples`_.
 
-**Note**: still beta quality software.
-
 Features
 --------
 

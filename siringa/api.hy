@@ -2,8 +2,8 @@
 (import [siringa.layer [Layer]])
 
 ;; Public API layer symbols to export
-(def --all-- (, "layer" "register" "inject" "mock"
-                "clear" "clear_mocks" "lookup"
+(def --all-- (, "layer" "register" "inject" "invoke"
+                "clear" "clear_mocks" "lookup" "mock"
                 "unregister" "unregister_mock"
                 "is_injectable" "Annotation" "A"
                 "lookup_mock" "mocks" "parent" "container"))
@@ -21,6 +21,7 @@
 (defdelegator register)
 (defdelegator mock)
 (defdelegator inject)
+(defdelegator invoke)
 (defdelegator Annotation)
 (defdelegator A) ;; Shortcut to "Annotation"
 (defdelegator unregister)

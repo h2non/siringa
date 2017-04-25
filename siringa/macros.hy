@@ -1,4 +1,3 @@
-(import inspect)
 (require [hy.contrib.multi [defn]]) ;; required macro for function overloading
 
 (defmacro has? [x name]
