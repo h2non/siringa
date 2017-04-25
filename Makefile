@@ -27,7 +27,7 @@ coverage:
 	@coverage report
 
 bump:
-	@bumpversion --tag --current-version $(version) patch siringa/__init__.py
+	@bumpversion --tag --commit --current-version $(version) patch siringa/__init__.py
 
 history:
 	@git changelog --tag $(version)
