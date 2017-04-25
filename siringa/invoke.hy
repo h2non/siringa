@@ -2,11 +2,18 @@
 (import [siringa.dependency [injectable?]])
 (import [siringa.errors [MissingDependencyError]])
 (import [siringa.analyzer [analyze signature-values annotate
+                           take-param inferrable?
                            valid? annotation? keyword-args]])
+
+(defn infer-name [param]
+  "Infers injectable name based on param annotation or value expression."
+  (str (if (inferrable? param)
+           (annotate (take-param param))
+           (annotate (. param annotation)))))
 
 (defn resolve [cont param]
   "Returns a dependency annotation for a given param."
-  (setv name (str (annotate (. param annotation))))
+  (setv name (infer-name param))
   (setv dependency (.get cont name))
   (unless dependency
     (raise

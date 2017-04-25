@@ -16,13 +16,17 @@
 (defn annotation? [param]
   (and param (has? param "annotation")))
 
+(defn inferrable? [param]
+  (and (injectable? (. param annotation))
+       (= 1 (len (. param annotation)))))
+
+(defn take-param [param]
+  (if (inferrable? param)
+    (+ "!" (. param name))
+    (. param annotation)))
+
 (defn take-annotations [params]
-  (map (fn [param]
-        (if (and (injectable? (. param annotation))
-                 (= 1 (len (. param annotation))))
-             (+ "!" (. param name))
-             (. param annotation)))
-       (filter annotation? params)))
+  (map take-param (filter annotation? params)))
 
 (defn injectable? [expr]
   (and (str? expr) (= (get expr 0) "!")))
@@ -53,9 +57,7 @@
         [True annotation]))
 
 (defn map-params [param]
-  (print "PARAM:" param)
-  (cond [(str? param) (annotate param)]
-        [True param]))
+  (if (str? param) (annotate param) param))
 
 (defn params [params &optional [origin "argument"]]
   (list (map map-params
