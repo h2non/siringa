@@ -1,6 +1,14 @@
 History
 =======
 
+v0.1.3 / 2017-04-25
+-------------------
+
+  * fix(invoke): missing export symbol at public level
+  * refactor(docs): update disclaimer note
+  * fix(docs): remove unused tutorial.rst file
+  * refactor(Makefile): use --commit when bumping version
+
 v0.1.2 / 2017-04-25
 -------------------
 
