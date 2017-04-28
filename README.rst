@@ -24,6 +24,7 @@ Features
 -  Hierarchical dependency containers based on inheritance.
 -  Dependency inference based on pattern-matching techniques.
 -  First-class support for dependency mocking for better testing.
+-  Highly tolerant: any type of object can be injected, including ``str``, ``generators``, ``coroutines`` ...
 -  Detects cyclic dependencies (work in progress).
 -  Small and (almost) dependency-free library.
 -  Works with CPython 3+.
