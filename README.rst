@@ -9,8 +9,8 @@
 About
 -----
 
-``siringa`` (meaning ``syringe`` in Italian) is a minimalist, idiomatic `dependency injection`_ and `inversion of control`_ library
-for Python_, implemented in Hy_, a homoiconic Lisp dialect for Python.
+``siringa`` (meaning ``syringe`` in Italian) is a minimalist, idiomatic `dependency injection`_/`inversion of control`_ library
+for Python_, implemented in Hy_, a Lisp dialect for Python.
 
 To get started, take a look to the `documentation`_, `API`_, `tutorial`_ and `examples`_.
 
@@ -27,7 +27,7 @@ Features
 -  Highly tolerant: any type of object can be injected, including ``str``, ``generators``, ``coroutines`` ...
 -  Detects cyclic dependencies (work in progress).
 -  Small and (almost) dependency-free library.
--  Works with CPython 3+.
+-  Works with CPython 3+ (because of Hy <> CPython AST compatibility)
 
 Design philosophy
 -----------------
