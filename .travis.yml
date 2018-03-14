@@ -6,12 +6,14 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
+  - "3.7"
   - pypy3
   - nightly
 
 matrix:
   allow_failures:
   - python: pypy3
+  - python: nightly
 
 sudo: false
 
